@@ -1,0 +1,14 @@
+# Read your Verilog RTL files
+read_verilog booth_datapath.v
+read_verilog booth_controller.v
+read_verilog booth_multiplier_full.v
+
+# Synthesize the top module
+synth -top booth_multiplier_full
+
+# Write synthesized gate-level netlist
+write_verilog booth_synth.v
+
+# Optional: generate schematic
+show
+
